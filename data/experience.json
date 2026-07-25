@@ -2,38 +2,98 @@
   "title": "Experience",
   "items": [
     {
-      "role": "E-commerce Web Application Developer",
-      "company": "ACLEDA University of Business",
-      "dateRange": "2023 - 2025",
-      "achievements": [
-        "Built a full e-commerce web application with product catalog, cart, checkout, and order tracking, plus a separate admin dashboard for managing products, stock, orders, and users",
-        "Developed the frontend using Vue.js (Composition API) and Tailwind CSS, with reusable components for product cards, filters, modals, and tables",
-        "Implemented secure APIs using Django REST Framework, including authentication (JWT), role-based permissions (admin vs customer), and endpoints for products, orders, payments, and reports",
-        "Designed PostgreSQL database schemas with relations between users, products, categories, stock, orders, and payments to keep data consistent and easy to query",
-        "Integrated Axios with Vue for CRUD operations in the admin dashboard: admins can create/update products, adjust stock, confirm orders, and view sales analytics in real time",
-        "Added responsive layout and mobile-first UI so both the shop and admin dashboard work smoothly on desktop, tablet, and phone"
-      ]
-    },
-    {
       "role": "Web Application Developer",
-      "company": "Sekai Technologies",
-      "dateRange": "2022 - 2023",
+      "company": "General Department of Customs and Excise of Cambodia (GDCE)",
+      "dateRange": "2025 - Present",
       "achievements": [
-        "Developed a web application for a client to manage their inventory and sales using Django REST Framework and Vue.js",
-        "Implemented secure APIs using Django REST Framework, including authentication (JWT), role-based permissions (admin vs customer), and endpoints for products, orders, payments, and reports",
-        "Designed PostgreSQL database schemas with relations between users, products, categories, stock, orders, and payments to keep data consistent and easy to query",
-        "Integrated Axios with Vue for CRUD operations in the admin dashboard: admins can create/update products, adjust stock, confirm orders, and view sales analytics in real time"
+        "Developed responsive chatbot interfaces using Vue.js and Vuetify",
+        "Designed chatbot architecture, conversation workflows, and system integration",
+        "Built FastAPI services and RESTful APIs for chatbot and OCR processing",
+        "Integrated OCR technology to extract text and structured information from uploaded documents and images",
+        "Designed database structures for storing chatbot conversations, user requests, documents, and OCR results",
+        "Implemented request validation, authentication, error handling, API testing, and debugging"
       ]
     },
     {
-      "role": "Intern Web Application Developer",
-      "company": "AIKIMI Technology",
-      "dateRange": "2021 - 2022",
+      "role": "Full-Stack Developer",
+      "company": "Freelance and Personal Projects",
+      "dateRange": "2024 - Present",
       "achievements": [
-        "Developed a web application for a client to manage their inventory and sales using Django REST Framework and Vue.js",
-        "Implemented secure APIs using Django REST Framework, including authentication (JWT), role-based permissions (admin vs customer), and endpoints for products, orders, payments, and reports",
-        "Designed PostgreSQL database schemas with relations between users, products, categories, stock, orders, and payments to keep data consistent and easy to query",
-        "Integrated Axios with Vue for CRUD operations in the admin dashboard: admins can create/update products, adjust stock, confirm orders, and view sales analytics in real time"
+        "Developed full-stack applications including school management, e-commerce, chatbot, OCR, and administrative systems",
+        "Built frontend applications using Nuxt.js, Vue.js, Nuxt UI, TypeScript, Tailwind CSS, React.js, and Vuetify",
+        "Developed RESTful APIs using FastAPI, Spring Boot, Django, Node.js, and Express.js",
+        "Designed and managed PostgreSQL, MySQL, Microsoft SQL Server, SQLite, and MongoDB databases",
+        "Implemented JWT authentication, role-based access control, validation, pagination, filtering, and API documentation",
+        "Containerized and deployed applications using Docker, Docker Compose, Nginx, Linux servers, and cloud platforms"
+      ]
+    },
+    {
+      "role": "School Management System Developer",
+      "company": "Personal Project",
+      "dateRange": "2026",
+      "achievements": [
+        "Developed a full-stack school management system using Nuxt.js, TypeScript, FastAPI, and PostgreSQL",
+        "Built features for managing students, courses, classes, enrollments, invoices, finance, and administrative operations",
+        "Implemented JWT authentication, Redis caching, Celery background tasks, and Google Sheets data backup",
+        "Containerized the system with Docker Compose and configured Nginx routing and load balancing"
+      ]
+    },
+    {
+      "role": "E-Commerce Application Developer",
+      "company": "Personal Project",
+      "dateRange": "2026",
+      "achievements": [
+        "Developed an e-commerce platform with a public product catalog, admin dashboard, point-of-sale features, and sales reports",
+        "Built the frontend using Nuxt.js, Vue.js, TypeScript, Nuxt UI, and Tailwind CSS",
+        "Developed RESTful APIs using FastAPI, SQLAlchemy, and PostgreSQL",
+        "Implemented authentication, product and inventory management, order processing, background jobs, and Telegram integration",
+        "Deployed the application using Docker, Docker Compose, Nginx, and a Linux server"
+      ]
+    },
+    {
+      "role": "Mobile Application Developer",
+      "company": "Personal Project",
+      "dateRange": "2025 - 2026",
+      "achievements": [
+        "Developed a Cambodian mobile banking application using Flutter and Dart",
+        "Built authentication, account dashboard, transaction history, money transfer, bill payment, card management, and QR scanning features",
+        "Used Provider for state management and organized the application into reusable models, screens, services, and themes",
+        "Created responsive interfaces for Android and iOS devices"
+      ]
+    },
+    {
+      "role": "IoT and Robotics Developer",
+      "company": "Academic Projects",
+      "dateRange": "2023 - 2024",
+      "achievements": [
+        "Studied electronic systems, robotics programming, sensors, motors, and microcontroller integration",
+        "Designed IoT concepts connecting embedded devices, backend APIs, databases, and monitoring dashboards",
+        "Worked with automation workflows, hardware simulation, and real-time data communication",
+        "Documented system architecture, hardware components, implementation processes, and testing results"
+      ]
+    },
+    {
+      "role": "AI Chatbot Developer",
+      "company": "General Department of Customs and Excise of Cambodia (GDCE)",
+      "dateRange": "2025 - Present",
+      "achievements": [
+        "Developed a responsive chatbot interface using Vue.js and Vuetify",
+        "Built FastAPI services and RESTful APIs for chatbot communication and data processing",
+        "Designed chatbot workflows and integrated the frontend, backend, and database",
+        "Stored user questions, chatbot responses, conversation history, and feedback in the database",
+        "Implemented authentication, request validation, error handling, API testing, and debugging"
+      ]
+    },
+    {
+      "role": "OCR System Developer",
+      "company": "General Department of Customs and Excise of Cambodia (GDCE)",
+      "dateRange": "2025 - Present",
+      "achievements": [
+        "Developed an OCR processing system for extracting text and structured data from trade documents and images",
+        "Built FastAPI endpoints for document upload, OCR processing, result retrieval, and data storage",
+        "Integrated the OCR pipeline with the chatbot system to support document-based questions",
+        "Designed database structures for uploaded documents, extracted text, processing status, and OCR results",
+        "Implemented file validation, exception handling, testing, debugging, and performance improvements"
       ]
     }
   ],
@@ -42,20 +102,20 @@
       "institution": "ACLEDA University of Business",
       "degree": "Bachelor of Computer Science and Engineering",
       "dateRange": "2023 - 2027",
-      "status": "Year 3 (Semester 1)",
-      "description": "Majoring in Computer Science and Engineering with focus on Web Development, Database Design, and Software Engineering principles."
+      "status": "Final-Year Student",
+      "description": "Studying Computer Science and Engineering with a focus on software development, RESTful APIs, database systems, artificial intelligence, cloud computing, DevOps, networking, and system design."
     },
     {
-      "institution": "Juang Jing Vocational High School (Taiwan)",
-      "degree": "High School of Electronic Robotics",
+      "institution": "Juang Jing Vocational High School, Taiwan",
+      "degree": "Vocational Training in Electronic Robotics",
       "dateRange": "2023 - 2024",
-      "description": "Specialized vocational training in electronic systems and robotics technology."
+      "description": "Completed specialized training in electronic systems, robotics technology, microcontrollers, sensors, motors, automation, and control systems."
     },
     {
       "institution": "Bat Doeng High School",
       "degree": "High School Diploma",
       "dateRange": "2020 - 2023",
-      "description": "Completed secondary education with strong performance in mathematics and sciences."
+      "description": "Completed secondary education with a focus on mathematics, science, technology, and problem-solving."
     }
   ]
 }

@@ -29,7 +29,7 @@ const mediaClass = computed(() =>
     }"
   >
     <div class="flex h-full flex-col">
-      <div class="aspect-[4/3] w-full overflow-hidden" :class="mediaClass">
+      <div class="aspect-4/3 w-full overflow-hidden" :class="mediaClass">
         <NuxtImg
           v-if="project.image"
           :src="project.image"
