@@ -1,0 +1,56 @@
+{
+  "language": { "switchTo": "Switch to {language}" },
+  "nav": { "home": "Home", "pricing": "Pricing", "help": "Help", "signIn": "Sign in", "signUp": "Sign up", "tryFree": "Try it free", "menu": "Menu", "menuDescription": "MiniDev navigation and account actions", "openMenu": "Open menu" },
+  "home": {
+    "seoDescription": "Explore MiniDev business apps for projects, finance, support, customers, and teamwork.",
+    "titleLead": "All your work on",
+    "titleHighlight": "one platform.",
+    "primaryAction": "Start now — it’s free",
+    "secondaryAction": "Explore all apps",
+    "priceNote": "From $19 / month\nfor all apps",
+    "qualityLead": "Level up",
+    "qualityTail": "your quality of work",
+    "work": "work",
+    "workspace": "MiniDev unified workspace"
+  },
+  "footer": {
+    "products": "Products", "resources": "Resources", "account": "Account", "company": "Company", "getStarted": "Get started",
+    "signIn": "Sign in", "createAccount": "Create account", "tryFree": "Try MiniDev free →",
+    "description": "MiniDev is a connected collection of responsive business tools for customer relationships, projects, invoicing, support, teamwork, and more.",
+    "supporting": "Start with the apps you need and keep your growing team in one clear workspace.",
+    "copyright": "Frontend demonstration.", "designed": "Designed for every screen.",
+    "links": { "crm": "CRM", "projects": "Projects", "invoicing": "Invoicing", "helpDesk": "Help Desk", "helpCenter": "Help center", "pricing": "Pricing", "gettingStarted": "Getting started", "allApps": "All applications", "home": "Home", "website": "Website", "analytics": "Analytics" }
+  },
+  "auth": {
+    "email": "Email", "workEmail": "Work email", "emailPlaceholder": "Enter your email", "password": "Password", "passwordPlaceholder": "Enter your password", "remember": "Remember me",
+    "fullName": "Full name", "namePlaceholder": "Enter your full name", "confirmPassword": "Confirm password", "confirmPlaceholder": "Enter your password again", "terms": "I accept the demo terms and privacy notice", "termsRequired": "Accept the terms to continue",
+    "loginTitle": "Sign in to your account", "signupTitle": "Sign up for an account", "signIn": "Sign in", "signUp": "Sign up", "signOut": "Sign out", "or": "or", "google": "Sign in with Google",
+    "noAccount": "Don't have an account?", "haveAccount": "Already have an account?", "backHome": "Return to MiniDev home",
+    "invalidEmail": "Enter a valid email address", "passwordLength": "Must be at least 8 characters", "nameRequired": "Enter your full name", "confirmRequired": "Confirm your password", "passwordMismatch": "Passwords do not match",
+    "loginComplete": "Sign-in demo complete", "signupComplete": "Account created", "signupDescription": "You can now sign in to your account.", "demoOnly": "Demo only — no data was sent.", "demoHint": "Testing only: use any valid email and a password with at least 8 characters."
+  },
+  "trial": {
+    "title": "Start your free trial", "description": "Explore the MiniDev workspace. No credit card required.", "selected": "Trial selected for", "fullName": "Full name", "workEmail": "Work email", "company": "Company name", "teamSize": "Team size", "country": "Country", "chooseSize": "Choose size", "chooseCountry": "Choose country", "action": "Start now — it’s free", "note": "No credit card required. Demo only — no account will be created.", "complete": "Trial demo complete"
+  },
+  "pricing": {
+    "title": "You are not dreaming!", "monthly": "Monthly", "yearly": "Yearly", "save": "Save 20%", "popular": "Most popular", "perMonth": "/ user / month", "getStarted": "Get started", "startTrial": "Start free trial",
+    "compareTitle": "Choose with confidence", "comparison": "MiniDev plan feature comparison", "feature": "Feature", "included": "Included", "notIncluded": "Not included", "questions": "Questions, answered", "before": "Before you choose a plan", "notice": "Everything here describes the frontend demonstration. Final service terms still need approval.",
+    "plans": {
+      "starter": { "name": "Starter", "description": "For a small team building its first shared workspace.", "features": ["Up to 3 team members", "Choose 2 MiniDev apps", "Community help", "Responsive workspace"] },
+      "growth": { "name": "Growth", "description": "For growing teams that want every core workflow connected.", "features": ["Up to 25 team members", "All MiniDev apps", "Email support", "Advanced views and exports"] },
+      "scale": { "name": "Scale", "description": "For larger teams that need flexibility and guided setup.", "features": ["Unlimited team members", "All MiniDev apps", "Priority support", "Workspace onboarding"] }
+    }
+  },
+  "help": {
+    "title": "How can we help?",
+    "channels": {
+      "chat": { "title": "Chat demo", "text": "Preview the intended real-time support experience.", "action": "Open chat demo" },
+      "email": { "title": "Email support", "text": "Use the form below to demonstrate a support request.", "action": "Write a message" },
+      "guides": { "title": "Product guides", "text": "Search the local help library for fast answers.", "action": "Browse guides" }
+    }
+  },
+  "product": { "tryFree": "Try {name} free", "viewPricing": "View pricing", "demoNote": "No credit card required · Demo only", "featuresTitle": "Useful features, thoughtfully connected", "questions": "Common questions", "about": "About MiniDev {name}" },
+  "apps": {
+    "crm": "CRM", "projects": "Projects", "invoicing": "Invoicing", "help-desk": "Help Desk", "website": "Website", "online-store": "Online Store", "inventory": "Inventory", "scheduling": "Scheduling", "time-tracking": "Time Tracking", "team": "Team", "documents": "Documents", "analytics": "Analytics", "sales": "Sales", "knowledge": "Knowledge", "sign": "Sign", "subscriptions": "Subscriptions", "ai-assistant": "AI Assistant", "point-of-sale": "Point of Sale", "discuss": "Discuss", "field-service": "Field Service", "planning": "Planning", "purchase": "Purchase", "manufacturing": "Manufacturing", "dashboard": "Dashboard"
+  }
+}
