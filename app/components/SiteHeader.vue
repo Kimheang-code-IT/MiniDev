@@ -87,7 +87,6 @@ onBeforeUnmount(() => window.removeEventListener('scroll', updateScrolled))
       </nav>
 
       <div class="flex items-center justify-end gap-1 sm:gap-3">
-        <LanguageSwitcher />
         <ColorModeButton />
         <template v-if="isAuthenticated">
           <span class="hidden max-w-36 truncate text-sm text-zinc-600 lg:inline dark:text-zinc-300">{{ user?.email }}</span>
