@@ -13,7 +13,7 @@ export default defineNuxtConfig({
     }
   },
   nitro: {
-    preset: 'static',
+    preset: process.env.VERCEL ? 'vercel' : 'static',
     prerender: {
       crawlLinks: true,
       routes: [

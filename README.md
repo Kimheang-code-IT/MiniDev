@@ -48,3 +48,7 @@ NUXT_PUBLIC_SITE_URL=https://minidev.com pnpm build
 
 `public/_headers` adds security headers, HSTS, and long-term caching for `/_nuxt/*` and `/icons/*`. Netlify and Cloudflare Pages read this file automatically; other hosts need the equivalent headers configured in their dashboard.
 
+## Vercel
+
+On Vercel the Nitro preset automatically switches to `vercel` (server rendering) so the deployment succeeds; locally and on other hosts it stays `static`. Import this repository into Vercel and keep the default Nuxt build settings — pushes to `main` deploy automatically. `vercel.json` provides the same security headers and asset caching that `_headers` gives static hosts. Set `NUXT_PUBLIC_SITE_URL` in the Vercel project environment variables.
+
