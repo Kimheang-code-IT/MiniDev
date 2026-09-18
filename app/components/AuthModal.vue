@@ -8,12 +8,13 @@ const { isOpen, selectedApp, close } = useAuthModal()
 const loading = ref(false)
 
 const schema = z.object({
-  name: z.string().min(2, 'Enter your full name'),
-  email: z.string().email('Enter a valid email address'),
-  company: z.string().min(2, 'Enter your company name'),
-  teamSize: z.string().min(1, 'Choose a team size'),
-  country: z.string().min(1, 'Choose a country')
+  name: z.string().min(2, t('auth.nameRequired')),
+  email: z.string().email(t('auth.invalidEmail')),
+  company: z.string().min(2, t('auth.companyRequired')),
+  teamSize: z.string().min(1, t('auth.teamSizeRequired')),
+  country: z.string().min(1, t('auth.countryRequired'))
 })
+const countryItems = computed(() => ['cambodia', 'singapore', 'thailand', 'vietnam', 'other'].map(key => t(`auth.countries.${key}`)))
 const state = reactive({ name: '', email: '', company: '', teamSize: '', country: '' })
 
 type TrialSchema = z.output<typeof schema>
@@ -47,7 +48,7 @@ const submit = async (_event: FormSubmitEvent<TrialSchema>) => {
         <UFormField :label="t('trial.company')" name="company" required><UInput v-model="state.company" autocomplete="organization" size="lg" /></UFormField>
         <div class="grid gap-4 sm:grid-cols-2">
           <UFormField :label="t('trial.teamSize')" name="teamSize" required><USelect v-model="state.teamSize" :items="['1–5', '6–25', '26–100', '101+']" :placeholder="t('trial.chooseSize')" size="lg" /></UFormField>
-          <UFormField :label="t('trial.country')" name="country" required><USelect v-model="state.country" :items="['Cambodia', 'Singapore', 'Thailand', 'Vietnam', 'Other']" :placeholder="t('trial.chooseCountry')" size="lg" /></UFormField>
+          <UFormField :label="t('trial.country')" name="country" required><USelect v-model="state.country" :items="countryItems" :placeholder="t('trial.chooseCountry')" size="lg" /></UFormField>
         </div>
         <UButton type="submit" block size="lg" class="brand-action" :loading="loading">{{ t('trial.action') }}</UButton>
         <p class="text-center text-xs text-zinc-500">{{ t('trial.note') }}</p>

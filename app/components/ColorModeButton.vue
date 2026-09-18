@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const colorMode = useColorMode()
+const { t } = useI18n()
 
 const nextTheme = computed(() => (colorMode.value === 'dark' ? 'light' : 'dark'))
 
@@ -52,7 +53,7 @@ const startViewTransition = (event: MouseEvent) => {
       color="neutral"
       variant="ghost"
       :icon="nextTheme === 'dark' ? 'i-lucide-moon' : 'i-lucide-sun'"
-      :aria-label="`Switch to ${nextTheme} mode`"
+      :aria-label="t('a11y.switchTheme')"
       @click="startViewTransition"
     />
     <template #fallback>

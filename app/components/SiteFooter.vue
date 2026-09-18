@@ -59,12 +59,12 @@ const linkLabel = (label: string) => t(`footer.links.${linkKeys[label]}`)
             {{ t('footer.supporting') }}
           </p>
           <div class="mt-7 flex items-center gap-3">
-            <a :href="externalLinks.telegram" target="_blank" rel="noopener noreferrer" class="grid size-10 place-items-center rounded-full text-zinc-300 transition hover:bg-white/10 hover:text-white" aria-label="Open Telegram">
+            <a :href="externalLinks.telegram" target="_blank" rel="noopener noreferrer" class="grid size-10 place-items-center rounded-full text-zinc-300 transition hover:bg-white/10 hover:text-white" :aria-label="t('a11y.openTelegram')">
               <svg viewBox="0 0 24 24" class="size-5 fill-current" aria-hidden="true"><path d="M21.8 3.4 18.6 19c-.24 1.1-.88 1.37-1.78.85l-4.9-3.61-2.36 2.27c-.26.26-.48.48-.99.48l.35-4.99 9.08-8.2c.4-.35-.09-.55-.61-.2L6.16 12.67l-4.84-1.51c-1.05-.33-1.07-1.05.22-1.56L20.48 2.3c.88-.32 1.65.2 1.32 1.1Z" /></svg>
             </a>
-            <a :href="externalLinks.github" target="_blank" rel="noopener noreferrer" class="grid size-10 place-items-center rounded-full text-zinc-300 transition hover:bg-white/10 hover:text-white" aria-label="Open GitHub"><UIcon name="i-lucide-github" class="size-5" /></a>
-            <NuxtLink to="/help" class="grid size-10 place-items-center rounded-full text-zinc-300 transition hover:bg-white/10 hover:text-white" aria-label="Contact support"><UIcon name="i-lucide-mail" class="size-5" /></NuxtLink>
-            <NuxtLink to="/pricing" class="grid size-10 place-items-center rounded-full text-zinc-300 transition hover:bg-white/10 hover:text-white" aria-label="View pricing"><UIcon name="i-lucide-badge-dollar-sign" class="size-5" /></NuxtLink>
+            <a :href="externalLinks.github" target="_blank" rel="noopener noreferrer" class="grid size-10 place-items-center rounded-full text-zinc-300 transition hover:bg-white/10 hover:text-white" :aria-label="t('a11y.openGithub')"><UIcon name="i-lucide-github" class="size-5" /></a>
+            <NuxtLink to="/help" class="grid size-10 place-items-center rounded-full text-zinc-300 transition hover:bg-white/10 hover:text-white" :aria-label="t('a11y.contactSupport')"><UIcon name="i-lucide-mail" class="size-5" /></NuxtLink>
+            <NuxtLink to="/pricing" class="grid size-10 place-items-center rounded-full text-zinc-300 transition hover:bg-white/10 hover:text-white" :aria-label="t('a11y.viewPricing')"><UIcon name="i-lucide-badge-dollar-sign" class="size-5" /></NuxtLink>
           </div>
         </div>
       </div>

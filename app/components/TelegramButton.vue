@@ -1,15 +1,17 @@
 <script setup lang="ts">
 import { externalLinks } from '~/data/site'
+
+const { t } = useI18n()
 </script>
 
 <template>
-  <UTooltip text="Contact us on Telegram" :delay-duration="150">
+  <UTooltip :text="t('a11y.openTelegram')" :delay-duration="150">
     <a
       :href="externalLinks.telegram"
       target="_blank"
       rel="noopener noreferrer"
       class="telegram-float group fixed bottom-5 right-5 z-40 grid size-14 place-items-center rounded-full bg-brand-600 text-white shadow-[0_12px_32px_rgba(113,75,103,0.42)] transition duration-200 hover:-translate-y-1 hover:bg-brand-700 focus-visible:outline-white sm:bottom-7 sm:right-7 sm:size-16"
-      aria-label="Contact MiniDev on Telegram"
+      :aria-label="t('a11y.contactTelegram')"
     >
       <span class="absolute inset-0 rounded-full border border-white/25" aria-hidden="true" />
       <svg viewBox="0 0 24 24" class="relative size-7 fill-current sm:size-8" aria-hidden="true">

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { comparisonRows, plans, pricingFaqs } from '~/data/plans'
+import { comparisonRows, plans } from '~/data/plans'
 
 const { open } = useAuthModal()
 const { t } = useI18n()
@@ -10,10 +10,14 @@ const localizedPlans = computed(() => plans.map(plan => ({
   description: t(`pricing.plans.${plan.id}.description`),
   features: plan.features.map((_, index) => t(`pricing.plans.${plan.id}.features.${index}`))
 })))
+const localizedPricingFaqs = computed(() => [0, 1, 2, 3, 4, 5].map(index => ({
+  label: t(`pricing.faqs.${index}.label`),
+  content: t(`pricing.faqs.${index}.content`)
+})))
 
 useSeoMeta({
-  title: 'Pricing',
-  description: 'Compare MiniDev plans for small, growing, and scaling teams. Demo prices are placeholders.'
+  title: () => t('nav.pricing'),
+  description: () => t('seo.pricingDescription')
 })
 
 </script>
@@ -62,11 +66,12 @@ useSeoMeta({
               </tr>
             </thead>
             <tbody>
-              <tr v-for="row in comparisonRows" :key="row.label" class="border-b border-zinc-100 last:border-0 dark:border-zinc-800/80">
-                <th scope="row" class="p-5 font-medium">{{ row.label }}</th>
-                <td v-for="(value, index) in row.values" :key="`${row.label}-${index}`" class="p-5 text-center text-zinc-600 dark:text-zinc-300">
-                  <UIcon v-if="value === true" name="i-lucide-check" class="mx-auto size-5 text-accent-700" aria-label="Included" />
-                  <span v-else-if="value === false" aria-label="Not included">—</span>
+              <tr v-for="row in comparisonRows" :key="row.labelKey" class="border-b border-zinc-100 last:border-0 dark:border-zinc-800/80">
+                <th scope="row" class="p-5 font-medium">{{ t(`pricing.comparisonRows.${row.labelKey}`) }}</th>
+                <td v-for="(value, index) in row.values" :key="`${row.labelKey}-${index}`" class="p-5 text-center text-zinc-600 dark:text-zinc-300">
+                  <UIcon v-if="value === 'yes'" name="i-lucide-check" class="mx-auto size-5 text-accent-700" :aria-label="t('pricing.included')" />
+                  <span v-else-if="value === 'no'" :aria-label="t('pricing.notIncluded')">—</span>
+                  <span v-else-if="value === 'unlimited' || value === 'all'">{{ t(`pricing.values.${value}`) }}</span>
                   <span v-else>{{ value }}</span>
                 </td>
               </tr>
@@ -79,7 +84,7 @@ useSeoMeta({
     <section class="section-space bg-brand-50 dark:bg-brand-950/30">
       <div class="site-container grid items-start gap-10 lg:grid-cols-[0.7fr_1.3fr]">
         <div><p class="eyebrow">{{ t('pricing.questions') }}</p><h2 class="section-title mt-3">{{ t('pricing.before') }}</h2><p class="mt-4 text-zinc-600 dark:text-zinc-300">{{ t('pricing.notice') }}</p></div>
-        <UAccordion :items="pricingFaqs" :ui="{ item: 'border-b border-brand-200 dark:border-brand-800' }" />
+        <UAccordion :items="localizedPricingFaqs" :ui="{ item: 'border-b border-brand-200 dark:border-brand-800' }" />
       </div>
     </section>
   </div>

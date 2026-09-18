@@ -11,8 +11,8 @@ const localizedSupportChannels = computed(() => supportChannels.map((channel, in
 })))
 
 useSeoMeta({
-  title: 'Help',
-  description: 'Search MiniDev help topics, explore common questions, and try the frontend support form.'
+  title: () => t('nav.help'),
+  description: () => t('seo.helpDescription')
 })
 </script>
 

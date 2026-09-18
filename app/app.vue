@@ -2,6 +2,7 @@
 const route = useRoute()
 const colorMode = useColorMode()
 const localeHead = useLocaleHead({ seo: true })
+const { t } = useI18n()
 const { public: { siteUrl } } = useRuntimeConfig()
 const ogImage = `${siteUrl}/og-image.png`
 const pageUrl = computed(() => `${siteUrl}${route.path === '/' ? '' : route.path}`)
@@ -13,10 +14,10 @@ useHead(() => ({
 useHead(() => localeHead.value)
 
 useSeoMeta({
-  title: 'Connected tools for growing teams',
-  description: 'MiniDev brings projects, sales, support, finance, and team workflows into one responsive workspace.',
-  ogTitle: 'MiniDev — connected tools for growing teams',
-  ogDescription: 'Explore a clear, connected suite of business tools built for teams that want to move faster.',
+  title: () => t('seo.homeTitle'),
+  description: () => t('seo.homeDescription'),
+  ogTitle: () => `${t('seo.homeTitle')} | MiniDev`,
+  ogDescription: () => t('seo.homeDescription'),
   ogType: 'website',
   ogUrl: () => pageUrl.value,
   ogSiteName: 'MiniDev',

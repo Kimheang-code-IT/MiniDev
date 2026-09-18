@@ -19,11 +19,12 @@ const DURATION = 12000
 const defaultBars = [35, 60, 48, 82, 68, 96, 74]
 
 const scenes = [
-  { label: 'Pipeline overview', nav: 2, query: 'Search deals…', values: [128, 92, 47], bars: [35, 60, 48, 82, 68, 96, 74], cursor: { left: '58%', top: '34%' } },
-  { label: 'Support inbox', nav: 4, query: 'Search tickets…', values: [64, 210, 18], bars: [72, 40, 88, 52, 96, 60, 44], cursor: { left: '26%', top: '58%' } },
-  { label: 'Reports', nav: 6, query: 'Search reports…', values: [97, 140, 76], bars: [50, 78, 62, 40, 84, 58, 92], cursor: { left: '72%', top: '66%' } }
+  { key: 'pipeline', nav: 2, values: [128, 92, 47], bars: [35, 60, 48, 82, 68, 96, 74], cursor: { left: '58%', top: '34%' } },
+  { key: 'inbox', nav: 4, values: [64, 210, 18], bars: [72, 40, 88, 52, 96, 60, 44], cursor: { left: '26%', top: '58%' } },
+  { key: 'reports', nav: 6, values: [97, 140, 76], bars: [50, 78, 62, 40, 84, 58, 92], cursor: { left: '72%', top: '66%' } }
 ]
 
+const { t } = useI18n()
 const rootEl = ref<HTMLElement | null>(null)
 const progress = ref(props.seed ? (props.seed % scenes.length) * (100 / scenes.length) : 0)
 const playing = ref(false)
@@ -35,10 +36,12 @@ let observer: IntersectionObserver | null = null
 
 const isDemo = computed(() => props.demo && !props.video)
 const decorative = computed(() => !props.demo && !props.video)
-const displayTitle = computed(() => props.title || 'MiniDev workspace')
+const displayTitle = computed(() => props.title || t('mockup.workspace'))
 
 const activeScene = computed(() => Math.min(scenes.length - 1, Math.floor((progress.value / 100) * scenes.length)))
 const scene = computed(() => scenes[activeScene.value]!)
+const sceneLabel = computed(() => t(`mockup.scenes.${scene.value.key}`))
+const sceneQuery = computed(() => t(`mockup.queries.${scene.value.key}`))
 const sceneProgress = computed(() => (progress.value / 100) * scenes.length - activeScene.value)
 
 const displayedValues = computed(() => {
@@ -115,13 +118,13 @@ onBeforeUnmount(() => {
             <span class="absolute inline-flex size-full rounded-full bg-brand-500 opacity-75" :class="playing ? 'animate-ping' : ''" />
             <span class="relative inline-flex size-1.5 rounded-full bg-brand-600" />
           </span>
-          {{ playing ? 'Playing demo' : 'Demo ready' }}
+          {{ playing ? t('mockup.playing') : t('mockup.ready') }}
         </span>
         <button
           v-if="showControls"
           type="button"
           class="grid size-9 place-items-center rounded-full text-zinc-500 transition hover:bg-zinc-100 hover:text-zinc-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-600 dark:hover:bg-zinc-800 dark:hover:text-zinc-100"
-          :aria-label="playing ? 'Pause product demo' : 'Play product demo'"
+          :aria-label="playing ? t('mockup.pause') : t('mockup.play')"
           @click="toggle"
         >
           <UIcon :name="playing ? 'i-lucide-pause' : 'i-lucide-play'" class="size-4" />
@@ -130,7 +133,7 @@ onBeforeUnmount(() => {
     </div>
 
     <p v-if="!decorative" class="sr-only">
-      {{ displayTitle }} animated product demo. Use the play and pause control to start or stop the preview.
+      {{ t('mockup.description', { title: displayTitle }) }}
     </p>
 
     <div v-if="video" class="mt-3 min-h-0 flex-1 overflow-hidden rounded-md bg-black">
@@ -141,7 +144,7 @@ onBeforeUnmount(() => {
         playsinline
         preload="metadata"
         class="h-full w-full object-cover"
-        :aria-label="`${displayTitle} product demo video`"
+        :aria-label="t('mockup.videoLabel', { title: displayTitle })"
       />
     </div>
 
@@ -160,7 +163,7 @@ onBeforeUnmount(() => {
         <div class="flex min-h-0 min-w-0 flex-col gap-4">
           <div v-if="isDemo" class="flex items-center gap-2 rounded-lg border border-zinc-200 bg-white px-3 py-2 text-xs text-zinc-500 dark:border-zinc-700 dark:bg-zinc-900">
             <UIcon name="i-lucide-search" class="size-3.5 shrink-0" />
-            <span class="truncate">{{ scene.query }}</span>
+            <span class="truncate">{{ sceneQuery }}</span>
             <span class="inline-block h-3.5 w-px shrink-0 animate-pulse bg-brand-500" />
           </div>
           <div class="grid gap-3 sm:grid-cols-3">
@@ -195,7 +198,7 @@ onBeforeUnmount(() => {
           <div class="h-full rounded-full bg-brand-600 transition-[width] duration-100 ease-linear" :style="{ width: `${progress}%` }" />
         </div>
         <div class="mt-1.5 flex items-center justify-between text-[11px] font-medium text-zinc-500">
-          <span>{{ scene.label }}</span>
+          <span>{{ sceneLabel }}</span>
           <span class="tabular-nums">{{ Math.round(progress) }}%</span>
         </div>
       </div>

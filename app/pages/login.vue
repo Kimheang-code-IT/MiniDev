@@ -4,14 +4,15 @@ import type { AuthFormField, FormSubmitEvent } from '@nuxt/ui'
 
 definePageMeta({ layout: 'auth' })
 
+const { t } = useI18n()
+
 useSeoMeta({
-  title: 'Sign in',
-  description: 'Sign in to the MiniDev frontend demonstration.',
+  title: () => t('auth.signIn'),
+  description: () => t('auth.demoHint'),
   robots: 'noindex, nofollow'
 })
 
 const toast = useToast()
-const { t } = useI18n()
 const { login } = useDemoAuth()
 const loading = ref(false)
 

@@ -29,19 +29,10 @@ export const plans: Plan[] = [
 ]
 
 export const comparisonRows = [
-  { label: 'Team members', values: ['3', '25', 'Unlimited'] },
-  { label: 'Included apps', values: ['2', 'All', 'All'] },
-  { label: 'Custom views', values: [false, true, true] },
-  { label: 'Data exports', values: [false, true, true] },
-  { label: 'Priority support', values: [false, false, true] },
-  { label: 'Guided onboarding', values: [false, false, true] }
+  { labelKey: 'teamMembers', values: ['3', '25', 'unlimited'] },
+  { labelKey: 'includedApps', values: ['2', 'all', 'all'] },
+  { labelKey: 'customViews', values: ['no', 'yes', 'yes'] },
+  { labelKey: 'dataExports', values: ['no', 'yes', 'yes'] },
+  { labelKey: 'prioritySupport', values: ['no', 'no', 'yes'] },
+  { labelKey: 'guidedOnboarding', values: ['no', 'no', 'yes'] }
 ] as const
-
-export const pricingFaqs = [
-  { label: 'Are these final MiniDev prices?', content: 'No. Prices on this frontend demonstration are placeholders and must be approved before launch.' },
-  { label: 'Can I start without a credit card?', content: 'The demo trial flow does not request payment details and does not create a real account.' },
-  { label: 'Can I change plans later?', content: 'The intended product model supports plan changes as a team grows. No billing backend exists in this demo.' },
-  { label: 'Which apps are included?', content: 'Growth and Scale show all MiniDev apps. Starter demonstrates a two-app entry plan.' },
-  { label: 'Is support included?', content: 'Community, email, and priority support levels are illustrative until the service offering is finalized.' },
-  { label: 'What happens after the trial?', content: 'Nothing is provisioned in this frontend-only build. The flow exists to demonstrate the intended experience.' }
-]

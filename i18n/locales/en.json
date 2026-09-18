@@ -27,6 +27,8 @@
     "loginTitle": "Sign in to your account", "signupTitle": "Sign up for an account", "signIn": "Sign in", "signUp": "Sign up", "signOut": "Sign out", "or": "or", "google": "Sign in with Google",
     "noAccount": "Don't have an account?", "haveAccount": "Already have an account?", "backHome": "Return to MiniDev home",
     "invalidEmail": "Enter a valid email address", "passwordLength": "Must be at least 8 characters", "nameRequired": "Enter your full name", "confirmRequired": "Confirm your password", "passwordMismatch": "Passwords do not match",
+    "companyRequired": "Enter your company name", "teamSizeRequired": "Choose a team size", "countryRequired": "Choose a country",
+    "countries": { "cambodia": "Cambodia", "singapore": "Singapore", "thailand": "Thailand", "vietnam": "Vietnam", "other": "Other" },
     "loginComplete": "Sign-in demo complete", "signupComplete": "Account created", "signupDescription": "You can now sign in to your account.", "demoOnly": "Demo only — no data was sent.", "demoHint": "Testing only: use any valid email and a password with at least 8 characters."
   },
   "trial": {
@@ -35,6 +37,23 @@
   "pricing": {
     "title": "You are not dreaming!", "monthly": "Monthly", "yearly": "Yearly", "save": "Save 20%", "popular": "Most popular", "perMonth": "/ user / month", "getStarted": "Get started", "startTrial": "Start free trial",
     "compareTitle": "Choose with confidence", "comparison": "MiniDev plan feature comparison", "feature": "Feature", "included": "Included", "notIncluded": "Not included", "questions": "Questions, answered", "before": "Before you choose a plan", "notice": "Everything here describes the frontend demonstration. Final service terms still need approval.",
+    "comparisonRows": {
+      "teamMembers": "Team members",
+      "includedApps": "Included apps",
+      "customViews": "Custom views",
+      "dataExports": "Data exports",
+      "prioritySupport": "Priority support",
+      "guidedOnboarding": "Guided onboarding"
+    },
+    "values": { "unlimited": "Unlimited", "all": "All" },
+    "faqs": [
+      { "label": "Are these final MiniDev prices?", "content": "No. Prices on this frontend demonstration are placeholders and must be approved before launch." },
+      { "label": "Can I start without a credit card?", "content": "The demo trial flow does not request payment details and does not create a real account." },
+      { "label": "Can I change plans later?", "content": "The intended product model supports plan changes as a team grows. No billing backend exists in this demo." },
+      { "label": "Which apps are included?", "content": "Growth and Scale show all MiniDev apps. Starter demonstrates a two-app entry plan." },
+      { "label": "Is support included?", "content": "Community, email, and priority support levels are illustrative until the service offering is finalized." },
+      { "label": "What happens after the trial?", "content": "Nothing is provisioned in this frontend-only build. The flow exists to demonstrate the intended experience." }
+    ],
     "plans": {
       "starter": { "name": "Starter", "description": "For a small team building its first shared workspace.", "features": ["Up to 3 team members", "Choose 2 MiniDev apps", "Community help", "Responsive workspace"] },
       "growth": { "name": "Growth", "description": "For growing teams that want every core workflow connected.", "features": ["Up to 25 team members", "All MiniDev apps", "Email support", "Advanced views and exports"] },
@@ -52,5 +71,38 @@
   "product": { "tryFree": "Try {name} free", "viewPricing": "View pricing", "demoNote": "No credit card required · Demo only", "featuresTitle": "Useful features, thoughtfully connected", "questions": "Common questions", "about": "About MiniDev {name}" },
   "apps": {
     "crm": "CRM", "projects": "Projects", "invoicing": "Invoicing", "help-desk": "Help Desk", "website": "Website", "online-store": "Online Store", "inventory": "Inventory", "scheduling": "Scheduling", "time-tracking": "Time Tracking", "team": "Team", "documents": "Documents", "analytics": "Analytics", "sales": "Sales", "knowledge": "Knowledge", "sign": "Sign", "subscriptions": "Subscriptions", "ai-assistant": "AI Assistant", "point-of-sale": "Point of Sale", "discuss": "Discuss", "field-service": "Field Service", "planning": "Planning", "purchase": "Purchase", "manufacturing": "Manufacturing", "dashboard": "Dashboard"
+  },
+  "mockup": {
+    "workspace": "MiniDev workspace",
+    "playing": "Playing demo",
+    "ready": "Demo ready",
+    "scenes": { "pipeline": "Pipeline overview", "inbox": "Support inbox", "reports": "Reports" },
+    "queries": { "pipeline": "Search deals…", "inbox": "Search tickets…", "reports": "Search reports…" },
+    "play": "Play product demo",
+    "pause": "Pause product demo",
+    "videoLabel": "{title} product demo video",
+    "description": "{title} animated product demo. Use the play and pause control to start or stop the preview."
+  },
+  "a11y": {
+    "switchTheme": "Switch color theme",
+    "openTelegram": "Contact us on Telegram",
+    "contactTelegram": "Contact MiniDev on Telegram",
+    "openGithub": "Open GitHub",
+    "contactSupport": "Contact support",
+    "viewPricing": "View pricing"
+  },
+  "error": {
+    "label": "Error",
+    "notFoundTitle": "This page is not here.",
+    "serverTitle": "Something went wrong.",
+    "notFoundText": "The MiniDev app or page may have moved.",
+    "serverText": "Please return home and try again.",
+    "back": "Back to MiniDev"
+  },
+  "seo": {
+    "homeTitle": "All your work on one platform",
+    "homeDescription": "MiniDev brings projects, sales, support, finance, and team workflows into one responsive workspace.",
+    "pricingDescription": "Compare MiniDev plans for small, growing, and scaling teams. Demo prices are placeholders.",
+    "helpDescription": "Search MiniDev help topics, explore common questions, and try the frontend support form."
   }
 }

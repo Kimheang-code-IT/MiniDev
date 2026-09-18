@@ -6,10 +6,10 @@ const { t, locale } = useI18n()
 const isKhmer = computed(() => locale.value === 'km')
 
 useSeoMeta({
-  title: 'All your work on one platform',
-  description: () => t('home.seoDescription'),
-  ogTitle: 'MiniDev — All your work on one platform',
-  ogDescription: () => t('home.seoDescription')
+  title: () => t('seo.homeTitle'),
+  description: () => t('seo.homeDescription'),
+  ogTitle: () => `${t('seo.homeTitle')} | MiniDev`,
+  ogDescription: () => t('seo.homeDescription')
 })
 </script>
 

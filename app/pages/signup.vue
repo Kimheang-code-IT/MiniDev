@@ -4,14 +4,15 @@ import type { AuthFormField, FormSubmitEvent } from '@nuxt/ui'
 
 definePageMeta({ layout: 'auth' })
 
+const { t } = useI18n()
+
 useSeoMeta({
-  title: 'Create account',
-  description: 'Create an account in the MiniDev frontend demonstration.',
+  title: () => t('auth.signUp'),
+  description: () => t('auth.signupDescription'),
   robots: 'noindex, nofollow'
 })
 
 const toast = useToast()
-const { t } = useI18n()
 
 const fields = computed<AuthFormField[]>(() => [
   {
